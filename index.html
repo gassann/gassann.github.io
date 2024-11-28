@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial=1.0">
+    <title>ポートフォリオ</title>
+    <link rel="stylesheet" href="normalize.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>GASSAN</h1>
+        <div class="sns">
+        <a href="https://twitter.com/nktng117"><img src="img/twitter.png"></a>
+        <a href="https://www.facebook.com/afterschool117"><img src="img/facebook.png"></a>
+        </div>
+        <ul>
+            <li><a href="#about">about</a></li>
+            <li><a href="#works">works</a></li>
+            <li><a href="#contact">contact</a></li>
+        </ul>
+    </header>
+	<div id="contents">
+	  <h1 class="txtEffect">総合力を高め、課題を解決する。</h1>
+	</div>
+    <main>
+    	<p class="works" id="about">about</p>
+        <article class="right clear">
+        <dl class="left_dl">
+        	<dt>skill</dt>
+        	<dd>Java</dd>
+        	<dd>PHP</dd>
+            <dd>Laravel</dd>
+        	<dd>Javascript</dd>
+        	<dd>Go</dd>
+        	<dd>MySQL</dd>
+		<dd>Unity</dd>
+		<dd>C#</dd>
+        </dl>
+        <dl class="right_dl">
+        	<dt>profile</dt>
+        	<dd>氏名：　衣笠　尚暉</dd>
+        	<dd>所属：　筑波大学　生物学類</dd>
+            <dd>職歴：　2017/1 ~ 2018/4 </dd>
+            <dd>　　　　株式会社エウレカ</dd>
+            <dd>　　　　2018/6 ~  </dd>
+            <dd>　　　　株式会社Aidemy</dd>
+        	<dd>年齢：　２３</dd>
+        	<dd>email:　nktng117@gmail.com</dd>
+            <dd>資格：　応用情報・英検準１級・簿記2級</dd>
+            <dd>趣味：　読書・街歩き・ヒッチハイク</dd>
+        </dl>
+        <img src="img/naoki.jpg" class="myphoto">
+        </article>
+
+        <p class="works" id="works">works</p>
+        <ul>
+        <li>
+            <div class="title">
+                CaT(メディア)
+            </div>
+            <div class="syasin">
+                <a href="http://campustown.wwww.jp/"><img src="img/cat2.jpg" width="100%" height="100%"></a>
+            </div>
+        </li>
+        <li>
+            <div class="title">
+                身の回りの元素(アプリ)
+            </div>
+            <div class="syasin">
+                <a href="https://play.google.com/store/apps/details?id=com.naoki.kinugasa.quiz"><img src="img/element2.jpg" width="100%" height="100%"></a>
+            </div>
+        </li>
+	<li>
+            <div class="title">
+                VR化学実験(VR)
+            </div>
+            <div class="syasin">
+            	<iframe width="302" height="170" src="https://www.youtube.com/embed/MtNwqsSi9Mw" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </li>
+        <li>
+            <div class="title">
+                Share(サービス)
+            </div>
+            <div class="syasin">
+                <a href="https://www.share-rental.com/"><img src="img/share.jpg" width="100%" height="100%"></a>
+            </div>
+        </li>
+        </ul>
+        <p class="works" id="contact">contact</p>
+        <div class="sns">
+        <a href="https://twitter.com/nktng117"><img src="img/twitter.png"></a>
+        <a href="https://www.facebook.com/afterschool117"><img src="img/facebook.png"></a>
+        </div>
+
+    </main>
+    <footer>
+        <ul>
+            <li><a href="#about">about</a></li>
+            <li><a href="#works">works</a></li>
+            <li>contact</li>
+        </ul>
+        <p>© GASSAN All rights reserved</p>
+    </footer>
+<script src="jquery.min.js"></script>
+<script>
+$(function() {
+  var splitText = $(".txtEffect");
+  splitText.contents().each(function() {
+    var t = $(this);
+    console.log(t);
+    t.replaceWith(t.text().replace(/(\S)/g, "<span class='c' data-char='$&'>$&</span>"));
+  });
+});
+</script>
+</body>
+</html>
